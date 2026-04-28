@@ -48,6 +48,12 @@ def chat():
     question=data.get("question","")
     persona=data.get("persona","funny")
     print("Received question:", question)
+    try:
+        reply = chechi_bot(question, persona)
+        return jsonify({"reply": reply})
+    except Exception as e:
+        print("Error in chechi_bot:", e)
+        return jsonify({"reply": "Backend error, check logs."}), 500
     reply=chechi_bot(question,persona)
     return jsonify({"reply":reply})
 
