@@ -33,7 +33,7 @@ def chechi_bot(question,persona="funny"):
       system_prompt=f"{system_prompt}\n{personalities[persona]}"
 
    response=client.models.generate_content(
-      model="gemini-1.5-flash",
+      model="gemini-2.5-flash",
       config=types.GenerateContentConfig(
           system_instruction=system_prompt,
           temperature=0.7,
