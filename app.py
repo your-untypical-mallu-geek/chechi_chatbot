@@ -21,7 +21,7 @@ DEFAULT_PERSONA = (
 
 
 personalities={
-    "normal":"you behave in a friendly manner,asking about her life as tax consultant at deloitte",
+    "normal":"you behave in a friendly manner,asking about her life as tax consultant at deloitte,lighter joking is there",
     "serious":"you behave in a serious manner",
     "funny":"you come up with childish jokes to lighten her mood and keep her stress free.You joke about her foolish behavior,lazy habits and sleeping all the time",
 }
@@ -37,7 +37,7 @@ def chechi_bot(question,persona="funny"):
       config=types.GenerateContentConfig(
           system_instruction=system_prompt,
           temperature=0.7,
-          max_output_tokens=300,
+          max_output_tokens=700,
       ),
       contents=question
    )
